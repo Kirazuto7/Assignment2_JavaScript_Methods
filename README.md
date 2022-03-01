@@ -1,4 +1,4 @@
-# Assignment1 - Zoo
+# Assignment2 - JavaScript Methods
 
 ### Group Members
 | Name       | Github              |
