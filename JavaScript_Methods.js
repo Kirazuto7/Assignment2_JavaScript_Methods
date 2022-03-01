@@ -10,9 +10,16 @@ Array.prototype.myEach = function(callbackFn) {
     }
 };
 
-// MAP //
-Array.prototype.myMap = function() {
-
+// MAP // Jordan Sukhnandan
+Array.prototype.myMap = function(callbackFn) {
+    let new_array = [];
+    for(let i = 0; i < this.length; i++) {
+        if(this[i] === undefined)
+          new_array.length += 1;
+        else
+            new_array.push(callbackFn(this[i]));
+    }
+    return new_array;
 };
 
 // SOME //
