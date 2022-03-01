@@ -22,9 +22,17 @@ Array.prototype.myMap = function(callbackFn) {
     return new_array;
 };
 
-// SOME //
-Array.prototype.mySome = function() {
+// SOME // Jordan Sukhnandan
+Array.prototype.mySome = function(callbackFn) {
+    let exists = false;
+    for(let i = 0; i < this.length; i++)
+    {
+        if(this[i] === undefined) continue;
 
+        if(callbackFn(this[i]) == true)
+            exists = true;
+    }
+    return exists;
 };
 
 // REDUCE //
