@@ -1,5 +1,5 @@
 // FOR EACH //
-Array.prototype.myEach = function() {
+Array.prototype.myEach = function(callbackFn) {
     for (let i = 0; i < this.length; i++) {   // "this" keyword refers to the array being called.
         if (this[i] === undefined) continue;
         // callbackFn can take up to 3 input parameters:
@@ -36,7 +36,7 @@ Array.prototype.myIndexOf = function() {
 };
 
 // PUSH //
-Array.prototype.myPush = function() {
+Array.prototype.myPush = function(...args) {
     let args_index = 0;  // Index of new element
     let length = this.length;   // Length of "this" array
     // The last element of "this" array is at length - 1
