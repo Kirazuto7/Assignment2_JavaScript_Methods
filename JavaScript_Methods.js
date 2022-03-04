@@ -67,12 +67,20 @@ Array.prototype.myLastIndexOf = function() {
 
 };
 
-// KEYS //
-Object.myKeys = function() {
-
+// KEYS // Alden Lee
+Object.myKeys = function(obj) {
+    const keys = [];
+    for(const key in obj){
+        keys.push(key);
+    }
+    return keys;
 };
 
-// VALUES //
-Object.myValues = function() {
-
+// VALUES // Alden Lee
+Object.myValues = function(obj) {
+    const val = [];
+    for(const key in obj){
+        val.push(obj[key]);
+    }
+    return val;
 };
