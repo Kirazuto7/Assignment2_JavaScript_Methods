@@ -110,9 +110,20 @@ Array.prototype.myPush = function(...args) {
     return this.length;  // Return new length of "this" array
 };
 
-// LASTINDEXOF //
-Array.prototype.myLastIndexOf = function() {
-
+// LASTINDEXOF // Arifa Baksh
+Array.prototype.myLastIndexOf = function(searchElement, fromIndex) {
+    if(fromIndex === undefined || fromIndex >= this.length) { //if fromIndex is not given or is greater than array length
+        fromIndex = this.length - 1;                            //search entire array
+    }
+    else if (fromIndex < 0) {
+        if(fromIndex + this.length < 0) {return -1;} //if fromIndex + array.length is less than 0, don't search array
+        else
+            fromIndex = fromIndex + this.length; //else, start search from index fromIndex + array.length
+    }
+    for(let i = fromIndex; i >= 0; i--) { //search array backwards, beginning at index fromIndex
+        if (this[i] === searchElement) {return i;}
+    }
+    return -1; //if element not found, return -1
 };
 
 // KEYS // Alden Lee
