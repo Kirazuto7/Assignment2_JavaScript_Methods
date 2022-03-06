@@ -32,6 +32,27 @@ Array.prototype.myIncludes = function() {
 
 // INDEXOF //
 Array.prototype.myIndexOf = function() {
+    
+    //turn negative index to positive
+    if(fromIndex < 0)
+    {
+        fromIndex = this.length + fromIndex;
+    }
+    
+    //index > array length
+    if(fromIndex >= this.length)
+    {
+        return -1;
+    }
+   
+    for (let i = fromIndex; i < this.length; i++)
+    {
+        if(this[i] === searchElement)
+        {
+            return i;
+        }
+    }
+    return -1;
 
 };
 
