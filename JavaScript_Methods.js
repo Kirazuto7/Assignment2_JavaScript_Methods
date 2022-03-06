@@ -43,6 +43,33 @@ Array.prototype.myReduce = function() {
 // INCLUDES //
 Array.prototype.myIncludes = function() {
 
+    //turn negative index to positive
+    if(fromIndex < 0)
+    {
+        fromIndex = this.length + fromIndex;
+    }
+
+    //index > array length
+    if(fromIndex >= this.length)
+    {
+        return false;
+    }
+
+    for (let i = fromIndex; i < this.length; i++)
+    {
+        //use strict equality for '2' === 2 expected false
+        if(this[i] === searchElement)
+        {
+            return true;
+        }
+        //use object.is for NaN == NaN
+        else if(Object.is(this[i], searchElement))
+        {
+            return true;
+        }
+    }
+    return false;
+
 };
 
 // INDEXOF //
