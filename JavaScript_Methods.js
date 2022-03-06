@@ -31,7 +31,7 @@ Array.prototype.myIncludes = function() {
 };
 
 // INDEXOF //Oscar Andrade
-Array.prototype.myIndexOf = function() {
+Array.prototype.myIndexOf = function(searchElement, fromIndex = 0) {
     
     //turn negative index to positive
     if(fromIndex < 0)
