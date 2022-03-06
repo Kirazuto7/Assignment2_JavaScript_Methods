@@ -25,7 +25,7 @@ Array.prototype.myReduce = function() {
 
 };
 
-// INCLUDES //
+// INCLUDES //Oscar Andrade
 Array.prototype.myIncludes = function() {
 
     //turn negative index to positive
