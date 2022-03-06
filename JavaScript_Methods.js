@@ -72,7 +72,7 @@ Array.prototype.myIncludes = function() {
 
 };
 
-// INDEXOF //
+// INDEXOF //Oscar Andrade
 Array.prototype.myIndexOf = function() {
     
     //turn negative index to positive
