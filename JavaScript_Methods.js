@@ -26,7 +26,7 @@ Array.prototype.myReduce = function() {
 };
 
 // INCLUDES //Oscar Andrade
-Array.prototype.myIncludes = function() {
+Array.prototype.myIncludes = function(searchElement, fromIndex = 0) {
 
     //turn negative index to positive
     if(fromIndex < 0)
