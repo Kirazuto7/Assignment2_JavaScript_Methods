@@ -35,9 +35,23 @@ Array.prototype.mySome = function(callbackFn) {
     return exists;
 };
 
-// REDUCE //
-Array.prototype.myReduce = function() {
+// REDUCE // Arifa Baksh
+Array.prototype.myReduce = function(callbackFn, initialValue) {
+    if (initialValue === undefined && !this.length) { //if initialValue not given, or array empty, throw error
+        throw new TypeError('No initialValue and empty array');
+    }
+    let total = initialValue;
+    let currentIndex = 0;
 
+    if(initialValue === undefined) {
+        total = this[0];
+        currentIndex = 1;
+    }
+
+    for(let i = currentIndex; i < this.length; i++) {
+        total = callbackFn(total, this[i], i, this);
+    }
+    return total;
 };
 
 // INCLUDES //Oscar Andrade
